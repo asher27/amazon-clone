@@ -85,7 +85,7 @@ const q = query(
 ```
 
 ### `useHistory() -> useNavigate()`
-use useNavigate() other than useHistory() since function changed since i'm using React 17 version.
+have used useNavigate() other than useHistory() since function changed since i'm using React 17 version.
 ```javascript
 navigate = useNavigate()
 navigate('/urlToGo..')
