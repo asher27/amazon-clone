@@ -39,11 +39,48 @@ const auth = getAuth(firebaseApp)
 
 export { db, auth, collection, addDoc, setDoc, doc, query, where, getDocs, orderBy }
 ```
-The page will reload when you make changes.\
-
 and then import functions like belows,
 ```javascript
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
+
+```
+
+### `Save to firebase Firestore`
+lots of the way of functions changes since firebase 9.....so i changed as below and it works well..
+```javascript
+const orderDocRef = doc(db, 'orders', paymentIntent.id)
+                setDoc(orderDocRef, {
+                    userId: user?.uid,
+                    userEmail: user?.email,
+                    basket: basket,
+                    amount: paymentIntent.amount,
+                    created: paymentIntent.created,
+                })
+                    .then(() => {
+                        console.log('[orderDocRef] Document has been added successfully')
+                    })
+                    .catch((error) => {
+                        console.log(error)
+                    })
+
+```
+
+### `Query from firebase Firestore`
+it's same reason as above.  it works well..
+```javascript
+const q = query(
+                collection(db, 'orders'),
+                where('userId', '==', user?.uid),
+                orderBy('created', 'desc'),
+            )
+
+            const querySnapshot = await getDocs(q)
+            setOrders(
+                querySnapshot.docs.map((doc) => ({
+                    id: doc.id,
+                    data: doc.data(),
+                })),
+            )
 
 ```
 
