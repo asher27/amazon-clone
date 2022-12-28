@@ -46,7 +46,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'fire
 ```
 
 ### `Save to firebase Firestore`
-lots of the way of functions changes since firebase 9.....so i changed as below and it works well..
+lots of function name and chaining changes since firebase 9.....so i changed as below and it works well..
 ```javascript
 const orderDocRef = doc(db, 'orders', paymentIntent.id)
                 setDoc(orderDocRef, {
