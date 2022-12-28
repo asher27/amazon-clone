@@ -1,10 +1,10 @@
 # Amazon Clone Coding - from YouTube Clever Programmer
 
-This project was baseon youtube clip of [Clever Progammer](https://youtu.be/RDV3Z1KCBvo?list=PL9nZhFiGQygu73mdKZy8B-2T9I9YcuNhe).
+This project was baseed on youtube clip of [Clever Progammer](https://youtu.be/RDV3Z1KCBvo?list=PL9nZhFiGQygu73mdKZy8B-2T9I9YcuNhe).
 
 ## Updates
 
-In the project, updates some code cause some features of Firebase, React changed as of 2023.
+In this project, updates some code cause some features of Firebase, React changed as of 2023.
 
 ### `import firebase`
 
