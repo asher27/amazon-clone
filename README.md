@@ -4,7 +4,7 @@ This project was baseed on youtube clip of [Clever Progammer](https://youtu.be/R
 
 ## Updates
 
-In this project, updates some code cause some features of Firebase, React changed as of 2023.
+In this project, updates some code cause some features of Firebase, React changed as of 2022.
 
 ### `import firebase`
 
