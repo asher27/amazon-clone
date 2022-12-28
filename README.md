@@ -15,15 +15,29 @@ package.json
 need to change the way of import 
 ```javascript 
 import { initializeApp } from 'firebase/app'
-import { getFirestore } from 'firebase/firestore'
+import {
+    getFirestore,
+    collection,
+    addDoc,
+    setDoc,
+    doc,
+    query,
+    where,
+    getDocs,
+    orderBy,
+} from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
 
+
+const firebaseConfig = {
+your code.....
+}
 
 const firebaseApp = initializeApp(firebaseConfig)
 const db = getFirestore(firebaseApp)
 const auth = getAuth(firebaseApp)
 
-export { db, auth }
+export { db, auth, collection, addDoc, setDoc, doc, query, where, getDocs, orderBy }
 ```
 The page will reload when you make changes.\
 
